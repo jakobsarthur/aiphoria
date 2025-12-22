@@ -20,7 +20,7 @@ The original **aiphoria** project was created by the **European Forest Institute
 This fork has been maintained and enhanced by:
 
 ### Current Maintainer
-- **Arthur Jakobs** (2024)
+- **Arthur Jakobs** (2025)
   - Package structure refactoring
   - Enhanced documentation
   - Import system improvements
@@ -69,7 +69,7 @@ If you use this project in your research or work, please cite:
 @software{aiphoria_fork,
   title={aiphoria: Enhanced fork with improved package structure},
   author={Jakobs, Arthur},
-  year={2024},
+  year={2025},
   url={https://github.com/jakobsarthur/aiphoria},
   license={MIT},
   note={Fork of original aiphoria by European Forest Institute}

@@ -13,7 +13,7 @@ Original Project:
     - License: MIT
     - Repository: https://github.com/EuropeanForestInstitute/aiphoria
 
-Current Fork (2024):
+Current Fork (2025):
     - Maintained by: Arthur Jakobs
     - License: MIT (same as original)
     - Repository: https://github.com/jakobsarthur/aiphoria

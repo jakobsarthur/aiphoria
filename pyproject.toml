@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
 authors = [
-    {name = "Arthur Jakobs", email = "arthur.jakobs@example.com"}
+    {name = "Arthur Jakobs", email = "artos.jakobs@psi.ch"}
 ]
 # Note: This is a fork of the original aiphoria project by European Forest Institute
 # See CONTRIBUTORS.md and LICENSE for complete attribution

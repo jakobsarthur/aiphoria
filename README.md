@@ -56,11 +56,6 @@ This project is licensed under the **MIT License** - both the original project a
 
 See [LICENSE](LICENSE) file for complete license text.
 
-**Key points:**
-- ✅ Free to use commercially, privately, and for research
-- ✅ Free to modify and distribute
-- ✅ Must include license and copyright notice
-- See [LICENSE](LICENSE) for full terms
 
 ### Contributors
 See [CONTRIBUTORS.md](CONTRIBUTORS.md) for detailed attribution information.
