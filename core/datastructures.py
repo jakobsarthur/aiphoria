@@ -2,9 +2,19 @@ from typing import Tuple, List, Union, Dict, Any
 from builtins import float
 import copy
 import pandas as pd
-from lib.odym.modules.ODYM_Classes import MFAsystem
-from core.parameters import StockDistributionParameterValueType
-from core.types import FunctionType, ChangeType
+try:
+    from aiphoria.lib.odym.modules.ODYM_Classes import MFAsystem
+except ImportError:
+    # Fallback for direct imports
+    import sys
+    import os
+    # Add lib to path if not already there
+    lib_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'lib', 'odym', 'modules')
+    if lib_path not in sys.path:
+        sys.path.insert(0, lib_path)
+    from ODYM_Classes import MFAsystem
+from .parameters import StockDistributionParameterValueType
+from .types import FunctionType, ChangeType
 
 
 class ObjectBase(object):

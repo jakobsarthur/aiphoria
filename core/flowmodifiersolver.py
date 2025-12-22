@@ -2,11 +2,11 @@ import sys
 from enum import Enum
 from typing import Tuple, List, Dict, Any
 import numpy as np
-import core.flowsolver as FlowSolver
-from core.datastructures import Flow, Scenario, FlowModifier, Process
-from core.parameters import ParameterScenarioType
-from core.types import FunctionType
-from core.logger import log
+from . import flowsolver as FlowSolver
+from .datastructures import Flow, Scenario, FlowModifier, Process
+from .parameters import ParameterScenarioType
+from .types import FunctionType
+from .logger import log
 
 
 class FlowErrorType(str, Enum):

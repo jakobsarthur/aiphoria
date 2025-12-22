@@ -2,14 +2,14 @@ import os
 import pickle
 import shutil
 from typing import Union, List
-import core.logger
-from core.logger import log, start_log_perf, stop_log_perf, clear_log_perf, show_log_perf_summary
-from core.datachecker import DataChecker
-from core.dataprovider import DataProvider
-from core.datastructures import Scenario
-from core.flowsolver import FlowSolver
-from core.parameters import ParameterName
-from core.utils import show_exception_errors, show_model_parameters, build_mfa_system_for_scenario
+from . import logger
+from .logger import log, start_log_perf, stop_log_perf, clear_log_perf, show_log_perf_summary
+from .datachecker import DataChecker
+from .dataprovider import DataProvider
+from .datastructures import Scenario
+from .flowsolver import FlowSolver
+from .parameters import ParameterName
+from .utils import show_exception_errors, show_model_parameters, build_mfa_system_for_scenario
 
 # Globals
 global_path_to_cache = ""
@@ -46,7 +46,7 @@ def init_builder(path_to_cache: str,
         if not os.path.exists(global_path_to_cache):
             os.makedirs(global_path_to_cache, exist_ok=True)
 
-    core.logger.use_log_perf = global_use_timing
+    logger.use_log_perf = global_use_timing
 
 
 def build_dataprovider(filename: str, use_cache: Union[bool, None] = None) -> DataProvider:

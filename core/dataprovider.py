@@ -2,8 +2,8 @@ import warnings
 from typing import List, Union, Any, Dict
 import numpy as np
 import pandas as pd
-from core.datastructures import Process, Flow, Stock, FlowModifier, ScenarioDefinition, Color
-from core.parameters import ParameterName, ParameterFillMethod, StockDistributionType, ParameterScenarioType
+from .datastructures import Process, Flow, Stock, FlowModifier, ScenarioDefinition, Color
+from .parameters import ParameterName, ParameterFillMethod, StockDistributionType, ParameterScenarioType
 
 # Suppress openpyxl warnings about Data Validation being suppressed
 warnings.filterwarnings('ignore', category=UserWarning, module="openpyxl")

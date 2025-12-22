@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools-scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aiphoria"
+version = "0.1.0"
+description = "Advanced Industrial Process Flow Handling and ODYM-based Resource Information Assistant"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Arthur Jakobs", email = "arthur.jakobs@example.com"}
+]
+# Note: This is a fork of the original aiphoria project by European Forest Institute
+# See CONTRIBUTORS.md and LICENSE for complete attribution
+keywords = [
+    "material flow analysis",
+    "ODYM",
+    "dynamic stock modeling",
+    "industrial ecology",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering",
+]
+
+dependencies = [
+    "numpy>=1.9",
+    "pandas>=1.0",
+    "matplotlib>=3.0",
+    "scipy>=0.14",
+    "openpyxl>=2.6",
+    "xlrd>=1.0",
+    "plotly>=4.0",
+    "Pillow>=8.0",
+    "tqdm>=4.0",
+    "IPython>=7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.10",
+    "black>=21.0",
+    "flake8>=3.8",
+    "mypy>=0.900",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jakobsarthur/aiphoria"
+"Documentation" = "https://aiphoria.readthedocs.io"
+"Repository" = "https://github.com/jakobsarthur/aiphoria.git"
+"Bug Tracker" = "https://github.com/jakobsarthur/aiphoria/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aiphoria*", "lib*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "--cov=aiphoria --cov-report=html --cov-report=term-missing"

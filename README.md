@@ -32,3 +32,36 @@ Online documentation can be found in [wiki](https://github.com/EuropeanForestIns
 If you have any questions or need help, do not hesitate to contact us:
 - [cleo.orfanidou@efi.int](mailto:cleo.orfanidou@efi.int)
 - [janne.jarvikyla@efi.int](mailto:janne.jarvikyla@efi.int)
+
+---
+
+## Attribution & License
+
+### Original Project
+This project is maintained as a **fork of the original aiphoria project** created by the **European Forest Institute (EFI)**.
+
+**Original Authors:**
+- Cleo Orfanidou (cleo.orfanidou@efi.int)
+- Janne Järvikylä (janne.jarvikyla@efi.int)
+
+**Original Repository:** [EuropeanForestInstitute/aiphoria](https://github.com/EuropeanForestInstitute/aiphoria)
+
+### Fork Maintenance
+This fork has been maintained and enhanced by Arthur Jakobs as of 2025.
+
+**Repository:** [jakobsarthur/aiphoria](https://github.com/jakobsarthur/aiphoria)
+
+### License
+This project is licensed under the **MIT License** - both the original project and this fork share the same permissive open-source license.
+
+See [LICENSE](LICENSE) file for complete license text.
+
+**Key points:**
+- ✅ Free to use commercially, privately, and for research
+- ✅ Free to modify and distribute
+- ✅ Must include license and copyright notice
+- See [LICENSE](LICENSE) for full terms
+
+### Contributors
+See [CONTRIBUTORS.md](CONTRIBUTORS.md) for detailed attribution information.
+

@@ -6,8 +6,15 @@ from typing import List, Dict, Any, Union, Optional
 import numpy as np
 import pandas as pd
 from IPython import get_ipython
-import lib.odym.modules.ODYM_Classes as msc
-from core.datastructures import Scenario, Flow
+try:
+    from aiphoria.lib.odym.modules import ODYM_Classes as msc
+except ImportError:
+    # Fallback for direct imports
+    lib_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'lib', 'odym', 'modules')
+    if lib_path not in sys.path:
+        sys.path.insert(0, lib_path)
+    import ODYM_Classes as msc
+from .datastructures import Scenario, Flow
 
 
 def show_model_parameters(model_params: Dict[str, Any]):

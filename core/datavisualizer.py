@@ -8,8 +8,8 @@ from typing import List, Dict, Any
 import plotly.graph_objects as go
 from PIL import Image
 
-from core.datastructures import Scenario, Color
-from core.parameters import ParameterName
+from .datastructures import Scenario, Color
+from .parameters import ParameterName
 
 
 class DataVisualizer(object):

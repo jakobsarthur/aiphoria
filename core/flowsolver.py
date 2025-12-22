@@ -6,11 +6,19 @@ import pandas as pd
 import tqdm as tqdm
 from pandas import DataFrame
 
-from core.types import FunctionType
-from core.datastructures import Process, Flow, Stock, ScenarioData, Scenario, Indicator
-from core.flowmodifiersolver import FlowModifierSolver
-from core.parameters import ParameterName, StockDistributionType, StockDistributionParameter, ParameterScenarioType
-from lib.odym.modules.dynamic_stock_model import DynamicStockModel
+from .types import FunctionType
+from .datastructures import Process, Flow, Stock, ScenarioData, Scenario, Indicator
+from .flowmodifiersolver import FlowModifierSolver
+from .parameters import ParameterName, StockDistributionType, StockDistributionParameter, ParameterScenarioType
+try:
+    from aiphoria.lib.odym.modules.dynamic_stock_model import DynamicStockModel
+except ImportError:
+    # Fallback for direct imports
+    import os
+    lib_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'lib', 'odym', 'modules')
+    if lib_path not in sys.path:
+        sys.path.insert(0, lib_path)
+    from dynamic_stock_model import DynamicStockModel
 
 
 # Solves flows to absolute values

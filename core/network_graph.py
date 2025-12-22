@@ -2,7 +2,7 @@ import json
 import os
 import webbrowser
 from typing import Dict, Any
-from core.datastructures import ScenarioData
+from .datastructures import ScenarioData
 
 
 class NetworkGraph(object):

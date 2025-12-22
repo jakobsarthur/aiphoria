@@ -1,0 +1,10 @@
+include README.md
+include LICENSE
+include pyproject.toml
+recursive-include core *.py
+recursive-include lib *.py
+recursive-include core *.html *.js
+recursive-include lib *.html *.js
+recursive-exclude __pycache__ *
+recursive-exclude .pytest_cache *
+recursive-exclude .git *
