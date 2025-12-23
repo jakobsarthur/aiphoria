@@ -51,9 +51,10 @@ from .core.datastructures import (
 )
 from .core.parameters import ParameterName, ParameterFillMethod
 from .core.utils import (
-    setup_current_working_directory,
-    setup_odym_directories,
     create_output_directory,
+    get_output_directory,
+    set_output_directory,
+    get_output_file_path,
 )
 from .core.logger import log
 
@@ -73,8 +74,9 @@ __all__ = [
     "Indicator",
     "ParameterName",
     "ParameterFillMethod",
-    "setup_current_working_directory",
-    "setup_odym_directories",
     "create_output_directory",
+    "get_output_directory",
+    "set_output_directory",
+    "get_output_file_path",
     "log",
 ]

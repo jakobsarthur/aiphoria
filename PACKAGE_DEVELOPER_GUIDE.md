@@ -199,6 +199,32 @@ end_year = ParameterName.EndYear
 output_path = ParameterName.OutputPath
 ```
 
+#### Manage output directory:
+```python
+from aiphoria.core.utils import (
+    create_output_directory,
+    get_output_directory,
+    get_output_file_path
+)
+
+# Set output directory (deletes existing, creates new)
+output_dir = create_output_directory("./output")
+print(f"Output will be saved to: {output_dir}")
+
+# All subsequent output operations use this directory
+visualizer.visualize_sankey_diagrams()  # ✓ Saves to output_dir
+
+# Get path for custom output files
+results_file = get_output_file_path("results.csv")
+scenario_file = get_output_file_path("report.html", scenario_name="Scenario_A")
+
+# Save your files
+with open(results_file, 'w') as f:
+    f.write("my data")
+```
+
+See [OUTPUT_DIRECTORY_MANAGEMENT.md](./OUTPUT_DIRECTORY_MANAGEMENT.md) for detailed guide.
+
 ### Testing Imports
 
 Verify the package structure is working:

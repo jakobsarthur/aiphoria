@@ -299,9 +299,10 @@ class DataVisualizer(object):
         target_scenario_name_to_data = {scenario_name: scenario_name_to_data[scenario_name]}
 
         # Add JS script that is run after the Plotly has loaded
-        filename_plotly = os.path.join(os.path.abspath("."), "core", "datavisualizer_data/plotly-3.0.0.min.js")
-        filename_pako = os.path.join(os.path.abspath("."), "core", "datavisualizer_data/pako.min.js")
-        filename_html = os.path.join(os.path.abspath("."), "core", "datavisualizer_data/datavisualizer_plotly.html")
+        module_dir = os.path.dirname(os.path.abspath(__file__))
+        filename_plotly = os.path.join(module_dir, "datavisualizer_data/plotly-3.0.0.min.js")
+        filename_pako = os.path.join(module_dir, "datavisualizer_data/pako.min.js")
+        filename_html = os.path.join(module_dir, "datavisualizer_data/datavisualizer_plotly.html")
 
         # Read HTML file contents
         html = ""
@@ -351,9 +352,10 @@ class DataVisualizer(object):
                                        params: Dict = None):
 
         # Add JS script that is run after the Plotly has loaded
-        filename_plotly = os.path.join(os.path.abspath("."), "core", "datavisualizer_data/plotly-3.0.0.min.js")
-        filename_pako = os.path.join(os.path.abspath("."), "core", "datavisualizer_data/pako.min.js")
-        filename_html = os.path.join(os.path.abspath("."), "core", "datavisualizer_data/datavisualizer_plotly.html")
+        module_dir = os.path.dirname(os.path.abspath(__file__))
+        filename_plotly = os.path.join(module_dir, "datavisualizer_data/plotly-3.0.0.min.js")
+        filename_pako = os.path.join(module_dir, "datavisualizer_data/pako.min.js")
+        filename_html = os.path.join(module_dir, "datavisualizer_data/datavisualizer_plotly.html")
 
         # Read HTML file contents
         html = ""

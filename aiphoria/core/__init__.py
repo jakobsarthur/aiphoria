@@ -32,9 +32,10 @@ from .datavisualizer import DataVisualizer
 from .network_graph import NetworkGraph
 from .logger import log
 from .utils import (
-    setup_current_working_directory,
-    setup_odym_directories,
     create_output_directory,
+    get_output_directory,
+    set_output_directory,
+    get_output_file_path,
 )
 
 __all__ = [
@@ -58,7 +59,8 @@ __all__ = [
     "ParameterFillMethod",
     "StockDistributionType",
     "log",
-    "setup_current_working_directory",
-    "setup_odym_directories",
     "create_output_directory",
+    "get_output_directory",
+    "set_output_directory",
+    "get_output_file_path",
 ]
