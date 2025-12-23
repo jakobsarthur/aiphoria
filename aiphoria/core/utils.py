@@ -49,18 +49,6 @@ def show_exception_errors(exception: Exception, msg: str = ""):
             print("\t{}".format(error))
 
 
-def setup_current_working_directory():
-    """
-    Setup current working directory.
-    """
-    if get_ipython() is None:
-        # Running in terminal
-        os.chdir(os.path.dirname(os.path.abspath(sys.argv[0])))
-    else:
-        # Running Notebook, cwd is already set
-        pass
-
-
 def create_output_directory(output_dir_path: str):
     """
     Create output directory.
@@ -76,13 +64,6 @@ def create_output_directory(output_dir_path: str):
 
     # Create output directory and directories for all scenarios
     os.makedirs(output_dir_path)
-
-
-def setup_odym_directories():
-    """
-    Setup ODYM directories. Appends to path to ODYM files to sys.path.
-    """
-    sys.path.insert(0, os.path.join(os.getcwd(), '.', 'lib', 'odym', 'modules'))
 
 
 def setup_scenario_output_directories(output_dir_path: str, scenario_names: List[str]) -> Dict[str, str]:
