@@ -264,10 +264,20 @@ def build_results(filename: str = None):
     show_model_parameters(model_params)
 
     # Setup output path
-    # NOTE: This only works inside Notebook, executable might need __file__?
-    # Convert output directory name to absolute path and update model parameter dictionary
-    model_params[ParameterName.OutputPath] = os.path.abspath(
-        os.path.join(os.getcwd(), model_params[ParameterName.OutputPath]))
+    # NOTE: Output directory MUST be set first via create_output_directory()
+    # This ensures all output is saved to the configured location
+    from .utils import get_output_directory
+    global_output_dir = get_output_directory()
+    
+    if global_output_dir is None:
+        raise RuntimeError(
+            "Output directory has not been set. "
+            "Call create_output_directory() before calling build_results(). "
+            "Example: create_output_directory('./output')"
+        )
+    
+    # Use the globally set output directory
+    model_params[ParameterName.OutputPath] = global_output_dir
 
     # **************************************************************
     # * Step 2: Check data integrity and build data for FlowSolver *
