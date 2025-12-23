@@ -2,6 +2,7 @@ import json
 import os
 import webbrowser
 from typing import Dict, Any
+from importlib.resources import files
 from .datastructures import ScenarioData
 
 
@@ -11,14 +12,16 @@ class NetworkGraph(object):
         self._visualizer = ""
         self._html = ""
 
-        # Load ECharts from file
-        path_echarts = os.path.join(os.path.abspath("."), "core", "network_graph_data", "echarts_min.js")
-        with open(path_echarts, mode="r", encoding="utf-8") as fs:
+        # Load ECharts from file using importlib.resources
+        package_files = files('aiphoria').joinpath('core', 'network_graph_data')
+        
+        echarts_file = package_files.joinpath('echarts_min.js')
+        with echarts_file.open('r', encoding='utf-8') as fs:
             self._echarts = fs.read()
 
         # Load visualizer script from file
-        path_network_graph = os.path.join(os.path.abspath("."), "core", "network_graph_data", "network_graph.js")
-        with open(path_network_graph, mode="r", encoding="utf-8") as fs:
+        network_graph_file = package_files.joinpath('network_graph.js')
+        with network_graph_file.open('r', encoding='utf-8') as fs:
             self._visualizer = fs.read()
 
     def build(self, scenario_data: ScenarioData = None, options: Dict[str, Any] = None) -> None:
@@ -112,11 +115,13 @@ class NetworkGraph(object):
         script = script.replace("{scenario_data}", json.dumps(graph_scenario_data))
         self._visualizer = script
 
-        path_network_graph = os.path.join(os.path.abspath("."), "core", "network_graph_data", "network_graph.html")
-        with open(path_network_graph, "r", encoding="utf-8") as fs:
+        # Load HTML template using importlib.resources
+        package_files = files('aiphoria').joinpath('core', 'network_graph_data')
+        html_file = package_files.joinpath('network_graph.html')
+        with html_file.open('r', encoding='utf-8') as fs:
             self._html = fs.read()
 
-        # Replace 'echarts_content' and 'visualizer
+        # Replace 'echarts_content' and 'visualizer'
         self._html = self._html.replace("{echarts_content}", self._echarts)
         self._html = self._html.replace("{visualizer_content}", self._visualizer)
 
