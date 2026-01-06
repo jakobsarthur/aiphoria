@@ -6,6 +6,7 @@
   </picture>
 </h1>
 
+
 ## Python library for assessing and visualizing dynamic wood material flows
 
 > ℹ️ _This library is under continuous development_
@@ -19,10 +20,22 @@ This is a Python library that facilitates the assessment of wood materials flows
 - **Conduct dynamic MFA as well as temporary carbon storage assessment**
 - **Visualize material flows** through a Sankey diagram and provided timestep.
 
+## Installation:
+
+- Install this fork: 
+
+```
+pip install git+https://github.com/jakobsarthur/aiphoria.git
+```
+
+- To install the main repo: see the [wiki](https://github.com/EuropeanForestInstitute/aiphoria/wiki/Part-0-Installation).
+
+
 ## Use cases:
 `aiphoria` is ideal for:
 - **Any temporal and spatial situation where material systems want to be assessed**
 - **Product sink/stock effects**
+
 
 ## Documentation
 Online documentation can be found in [wiki](https://github.com/EuropeanForestInstitute/aiphoria/wiki).
